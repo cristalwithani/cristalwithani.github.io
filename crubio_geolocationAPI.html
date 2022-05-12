@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>quakertown-geolocation.com</title>
+</head>
+<body>
+
+  <h1>Welcome to Quakertown!</h1>
+
+  <p>Click on the button below to see who used to live here.</p>
+
+  <button onclick="getLocation()">Click Here</button>
+  <p id="demo"></p>
+
+  <script>
+  var x = document.getElementById("demo");
+
+  function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+  }
+
+  function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+
+/* Coordinates at the MCL */
+    if (position.coords.latitude > 33.22500 && position.coords.latitude < 33.22600 &&
+        position.coords.longitude < -97.1269100 && position.coords.longitude > -97.1269500) { //copy and paste this for other coords
+          window.open("https://www.google.com") //change this later to POI pages
+    }
+    if (position.coords.latitude > 33.22000 && position.coords.latitude < 33.22100 &&
+        position.coords.longitude < -97.12800 && position.coords.longitude > -97.12900){
+          window.open("https://angeline-burr.com")
+        }
+    if (position.coords.latitude > 33.22000 && position.coords.latitude < 33.22100 &&
+        position.coords.longitude < -97.12700 && position.coords.longitude > -97.12800){
+          window.open("https://dr-moten.com")
+        }
+    if (position.coords.latitude > 33.21900 && position.coords.latitude < 33.22000 &&
+        position.coords.longitude < -97.12900 && position.coords.longitude > -97.13000){
+          window.open("https://crawfords.com")
+        }
+    if (position.coords.latitude > 33.21800 && position.coords.latitude < 33.21900 &&
+        position.coords.longitude < -97.13000 && position.coords.longitude > -97.13100){
+          window.open("https://will-and-ida-hill.com")
+        }
+    else { alert("You are not somewhere within Quakertown") }
+  }
+  </script>
+</body>
+</html>
