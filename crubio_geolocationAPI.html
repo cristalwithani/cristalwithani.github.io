@@ -3,6 +3,7 @@
 <head>
   <title>quakertown-geolocation.com</title>
 </head>
+
 <body>
 
   <h1>Welcome to Quakertown!</h1>
@@ -27,29 +28,30 @@
   x.innerHTML = "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
 
-/* Coordinates at the MCL */
+//Coordinates at the MCL for testing
     if (position.coords.latitude > 33.22500 && position.coords.latitude < 33.22600 &&
         position.coords.longitude < -97.1269100 && position.coords.longitude > -97.1269500) { //copy and paste this for other coords
           window.open("https://www.google.com") //change this later to POI pages
-    }
+        }
+//POI Coordinates and redirects
     if (position.coords.latitude > 33.22000 && position.coords.latitude < 33.22100 &&
         position.coords.longitude < -97.12800 && position.coords.longitude > -97.12900){
-          window.open("https://angeline-burr.com")
+          window.open("https://github.com/cristalwithani/cristalwithani.github.io/blob/7c79d6a04310ecb6cd7cfd132e4fffef28f4a9cb/angeline-burr.html")
         }
     if (position.coords.latitude > 33.22000 && position.coords.latitude < 33.22100 &&
         position.coords.longitude < -97.12700 && position.coords.longitude > -97.12800){
-          window.open("https://dr-moten.com")
+          window.open("https://github.com/cristalwithani/cristalwithani.github.io/blob/7c79d6a04310ecb6cd7cfd132e4fffef28f4a9cb/dr.-moten.html")
         }
     if (position.coords.latitude > 33.21900 && position.coords.latitude < 33.22000 &&
         position.coords.longitude < -97.12900 && position.coords.longitude > -97.13000){
-          window.open("https://crawfords.com")
+          window.open("https://github.com/cristalwithani/cristalwithani.github.io/blob/7c79d6a04310ecb6cd7cfd132e4fffef28f4a9cb/crawfords.html")
         }
     if (position.coords.latitude > 33.21800 && position.coords.latitude < 33.21900 &&
         position.coords.longitude < -97.13000 && position.coords.longitude > -97.13100){
-          window.open("https://will-and-ida-hill.com")
+          window.open("https://github.com/cristalwithani/cristalwithani.github.io/blob/7c79d6a04310ecb6cd7cfd132e4fffef28f4a9cb/will-and-ida-hill.html")
         }
     else { alert("You are not somewhere within Quakertown") }
   }
-  </script>
+    </script>
 </body>
 </html>
